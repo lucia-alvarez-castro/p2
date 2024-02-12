@@ -1,0 +1,686 @@
+* {
+    margin: 0; 
+    padding: 0;
+  }
+  body {
+    margin-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background-color: white;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0; /* Se coloca en la parte superior */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+    margin-top: 50px;
+  }
+  main {
+    flex: 1 1 0;
+    overflow: auto;
+    margin-top: 50px;
+  }
+  /*footer TOP es lo de envío gratis*/
+  footer.bottom {
+    text-align: center;
+    border-top: 2px solid black;
+    background-color: #db317b;
+    padding: 1rem;
+  }
+  footer.top {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #db317b;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+
+  }
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white; /* Color de fondo del menú */
+    display: flex;
+  }
+  .menu a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #db317b;
+    font-weight: bold;
+  }
+
+  .menu li {
+    flex-grow: 1;
+  }
+  .menu li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+  }
+  .menu li a:hover {
+    background-color: #db317b; /* Color de fondo cuando se pasa el mouse por encima */
+  }
+
+  article {
+    margin-top: 30px;
+    padding: 1rem;
+  }
+  article:target {
+    display: block;
+  }
+  article p {
+    padding: 0.5rem;
+  }
+ 
+  .imagenes-inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "shop shop shop"
+      "header1   header2 header3"
+      "main1 main2   main3"
+      "footer1   footer2 footer3"
+      "YT YT YT"
+      "VIDEO VIDEO VIDEO";
+    max-width: 100%;
+    justify-items: center; /* Centrar horizontalmente */
+    align-items: center; 
+    gap: 7px;
+    padding: 10px;
+}
+
+.shop-now-button {
+    grid-area: shop; /* Asegúrate de que ocupe el mismo área que el texto */
+    text-align: center;
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: #db317b;
+    font-weight: bold;
+    font-size: 200px;
+    display: block;
+}
+
+.yout {
+    grid-area: YT; /* Asegúrate de que ocupe el mismo área que el texto */
+    text-align: center;
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: #db317b;
+    font-weight: bold;
+    font-size: 100px;
+    display: block;
+}
+
+.video1,
+.video2 {
+    grid-area: VIDEO;
+    display: block;
+    margin: auto; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el contenido dentro del bloque */
+    padding: 20px;
+}
+/* Estilo para cada imagen del inicio */
+.imagen-inicio1 {
+    grid-area: header1;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio2 {
+    grid-area: header2;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio3 {
+    grid-area: header3;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio4 {
+    grid-area: main1;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio5 {
+    grid-area: main2;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio6 {
+    grid-area: main3;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio7 {
+    grid-area: footer1;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio8 {
+    grid-area: footer2;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+.imagen-inicio9 {
+    grid-area: footer3;
+    max-width: 100%;
+    height: 600px;
+    width: 400px;
+}
+
+
+.seccion1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "titch   titch titch"
+      "ch1 ch2   ch3"
+      "nch1 nch2 nch3"
+      "prch1 prch2 prch3"
+      "titfunda   titfunda titfunda"
+      "f1 f2   f3"
+      "nf1 nf2 nf3"
+      "prf1 prf2 prf3"
+      "f4 f5   f6"
+      "nf4 nf5 nf6"
+      "prf4 prf5 prf6"
+      "f7 f8   f9"
+      "nf7 nf8 nf9"
+      "prf7 prf8 prf9"
+      "titcorrea titcorrea titcorrea"
+      "c1 c2 c3"
+      "nc1 nc2 nc3"
+      "prc1 prc2 prc3"
+      "c4 c5 c6"
+      "nc4 nc5 nc6"
+      "prc4 prc5 prc6";
+    max-width: 100%;
+    justify-items: center; /* Centrar horizontalmente */
+    align-items: center; 
+    gap: 7px;
+    padding: 10px;
+}
+
+.titulo-ch {
+    grid-area: titch; /* Asegúrate de que ocupe el mismo área que el texto */
+    text-align: center;
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: #db317b;
+    font-weight: bold;
+    font-size: 150px;
+    display: block;
+}
+
+.ch-inicio1 {
+    grid-area: ch1;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+.ch-inicio2 {
+    grid-area: ch2;
+    max-width: 100%;
+    height: 600px;
+    width: 550px;
+}
+.ch-inicio3 {
+    grid-area: ch3;
+    max-width: 100%;
+    height: 600px;
+    width: 450px;
+}
+.nombre-ch1 {
+    grid-area: nch1; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-ch2 {
+    grid-area: nch2; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-ch3 {
+    grid-area: nch3; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+
+.precio-ch1 {
+    grid-area: prch1; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-ch2 {
+    grid-area: prch2; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-ch3 {
+    grid-area: prch3; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.titulo-funda {
+    grid-area: titfunda; /* Asegúrate de que ocupe el mismo área que el texto */
+    text-align: center;
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: #db317b;
+    font-weight: bold;
+    font-size: 150px;
+    display: block;
+}
+
+.fundaroja {
+    grid-area: f1;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundamarron {
+    grid-area: f2;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundadorada {
+    grid-area: f3;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundaverde {
+    grid-area: f4;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundablanca {
+    grid-area: f5;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundarosa {
+    grid-area: f6;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundanaranja {
+    grid-area: f7;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundaplateada {
+    grid-area: f8;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+.fundapurpurina {
+    grid-area: f9;
+    max-width: 100%;
+    height: 350px;
+    width: 350px;
+}
+
+.nombre-f1 {
+    grid-area: nf1; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f2 {
+    grid-area: nf2; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f3 {
+    grid-area: nf3; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f4 {
+    grid-area: nf4; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f5 {
+    grid-area: nf5; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f6 {
+    grid-area: nf6; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f7 {
+    grid-area: nf7; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f8 {
+    grid-area: nf8; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-f9 {
+    grid-area: nf9; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+
+.precio-f1 {
+    grid-area: prf1; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-f2 {
+    grid-area: prf2; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-f3 {
+    grid-area: prf3; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio-f4 {
+    grid-area: prf4; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio-f5 {
+    grid-area: prf5; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio-f6 {
+    grid-area: prf6; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio-f7 {
+    grid-area: prf7; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio-f8 {
+    grid-area: prf8; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio-f9 {
+    grid-area: prf9; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.titulo-cadena {
+    grid-area: titcorrea; /* Asegúrate de que ocupe el mismo área que el texto */
+    text-align: center;
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: #db317b;
+    font-weight: bold;
+    font-size: 150px;
+    display: block;
+}
+
+.negralarga {
+    grid-area: c1;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+
+.negracorta {
+    grid-area: c2;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+
+.platalarga {
+    grid-area: c3;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+
+.platacorta {
+    grid-area: c4;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+
+.transparentelarga {
+    grid-area: c5;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+
+.transparentecorta {
+    grid-area: c6;
+    max-width: 100%;
+    height: 600px;
+    width: 350px;
+}
+
+.nombre-c1 {
+    grid-area: nc1; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-c2 {
+    grid-area: nc2; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-c3 {
+    grid-area: nc3; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-c4 {
+    grid-area: nc4; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-c5 {
+    grid-area: nc5; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.nombre-c6 {
+    grid-area: nc6; /* Asegúrate de que ocupe el mismo área que el texto */
+    padding: 20px; /* Puedes ajustar este valor según tus necesidades */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+
+.precio-c1 {
+    grid-area: prc1; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-c2 {
+    grid-area: prc2; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-c3 {
+    grid-area: prc3; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-c4 {
+    grid-area: prc4; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-c5 {
+    grid-area: prc5; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-c6 {
+    grid-area: prc6; /* Asegúrate de que ocupe el mismo área que el texto */
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse; /* Combinar bordes de celdas */
+    width: 100%; /* Ancho total de la tabla */
+}
+
+th, td {
+    border: 1px solid black; /* Borde de 1px sólido negro para celdas y encabezados */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: center; /* Centrar el contenido */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
+}
+
+.condiciones, .seccion3 {
+    text-align: left;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+}
+
+.condiciones h2, .seccion3 h1 {
+    margin-top: 30px;
+}
+
+.condiciones h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.seccion3 li{
+    margin-left: 100px;
+}
+
+.seccion4
+{
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formulario
+{
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 226px;
+    margin-bottom: 226px;
+    max-width: 100%;
+}

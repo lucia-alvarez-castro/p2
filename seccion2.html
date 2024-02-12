@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>MAS1: Mucho MÁS que UN bolso</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <footer class="top">
+        <p>ENVÍOS GRATIS A PARTIR DE 100€</p>
+    </footer>
+    <header>
+        <nav>
+          <ul class="menu">
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="seccion1.html">Catálogo</a>
+            </li>
+            <li>
+              <a href="seccion2.html">Comprar</a>
+            </li>
+            <li>
+              <a href="seccion3.html">FAQ</a>
+            </li>
+            <li>
+              <a href="seccion4.html">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <article id="seccion2">
+        <form action="formulario.html" method="get o post"> <!-- Aqui va la web a donde se envía el contenido del formulario-->
+            <h2>Haz tu pedido ahora</h2>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <p>
+                <label for="name_id">Nombre:</label><br>
+                    <input type="text" id="name_id" name="nombre" required>
+                </p>
+                <p>
+                <label for="surname_id">Apellidos:</label><br>
+                <input type="text" id="surname_id" name="apellidos" required>
+                </p>
+                <p>
+                <label for="phone_id">Teléfono:</label><br> <!--Break hace un retorno de carro. No es semántico es estético-->
+                    <input type="tel" id="phone_id" name="telefono" required>
+                </p>
+                <p>
+                <label for="email_id">Email:</label><br>
+                    <input type="email" id="email_id" name="email" required> <!--Con el required es obligatorio. Se quejará al hacer submit-->
+                </p>
+                <p>
+                    <label for="address_id">Dirección:</label><br>
+                        <input type="text" id="address_id" name="direccion" required> <!--Con el required es obligatorio. Se quejará al hacer submit-->
+                </p>              
+                <p>
+                    <label for="zipcode_id">Código postal:</label><br>
+                        <input type="number" id="zipcode_id" name="codigopostal" required> <!--Con el required es obligatorio. Se quejará al hacer submit-->
+                </p>   
+                <p>
+                    <label for="localidad_id">Localidad:</label><br>
+                        <input type="text" id="localidad_id" name="localidad" required> <!--Con el required es obligatorio. Se quejará al hacer submit-->
+                </p>   
+                <p>
+                    <label for="provincia_id">Provincia:</label><br>
+                        <input type="text" id="provincia_id" name="provincia" required> <!--Con el required es obligatorio. Se quejará al hacer submit-->
+                </p>  
+                </fieldset>
+
+
+
+                <fieldset>
+                <legend>Producto</legend>
+                <p>
+                <label for="base_id">Color de la base:</label><br>
+                <select name="base" id="base_id" required>
+                    <option value="Base1">Negra</option>
+                    <option value="Base2">Plateada</option>
+                    <option value="Base3">Transparente</option>
+                </select>
+                <!-- Menú con 1 opción seleccionable de entre estas: Modelo 1, Modelo 2 y Modelo 3 --> 
+                </p>
+                <p>
+                    <label for="base_id">Color de la funda:</label><br>
+                    <select name="base" id="base_id" required>
+                        <option value="Base1">Roja</option>
+                        <option value="Base2">Marrón</option>
+                        <option value="Base3">Dorada</option>
+                        <option value="Base3">Verde</option>
+                        <option value="Base3">Blanca</option>
+                        <option value="Base3">Rosa</option>
+                        <option value="Base3">Naranja</option>
+                        <option value="Base3">Plateada</option>
+                        <option value="Base3">Purpurina</option>
+                    </select>
+                </p>
+
+
+
+                <p>Tamaño de la correa:
+                <ul>
+                    <li>
+                        <input type="radio" id="size-1_id" name="size" value="Larga" required>
+                    <!-- Opción excluyente obligatoria -->
+                    <label for="size-1_id">Larga</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="size-2_id" name="size" value="Corta" required>
+                    <!-- Opción excluyente obligatoria -->
+                    <label for="size-2_id">Corta</label>
+                    </li>
+                </ul>
+                </p>
+
+                <label for="base_id">Color de la correa:</label><br>
+                <select name="base" id="base_id" required>
+                    <option value="Base1">Negra</option>
+                    <option value="Base2">Plateada</option>
+                    <option value="Base3">Transparente</option>
+                </select>
+
+                <p>
+                <label for="amount_id">Cantidad:</label><br>
+                    <input type="number" min="0" max="5"  id="amount_id" name="amount">
+                <!-- Campo numérico con valor mínimo 1 y máximo 5 obligatorio -->
+                </p>
+
+                </fieldset>
+
+
+
+
+                <fieldset>
+                <legend>Entrega</legend>
+                <p>
+                <label for="fecha_id">Fecha:</label><br>
+                <input type="date" id="fecha_id" name="fecha "min="2024-02-12">
+                <!-- Campo de fecha con valor minimo la fecha de hoy -->
+                </p>
+                <p>
+                <label for="instructions_id">Instrucciones de entrega:</label><br>
+                <textarea id="instructions_id" name="instrucciones" rows="5" cols="25"></textarea>
+                <!-- Área de texto -->
+                </p>
+                </fieldset>
+
+
+
+                <fieldset>
+                    <input type="submit" value="Enviar">
+                <!-- Botón para enviar -->
+                    <input type="reset" value="Limpiar">
+                <!-- Botón para resetear el formulario -->
+             </fieldset>
+            </form>
+      </article>
+      <footer class="bottom">
+        <p><a href="condiciones.html">Condiciones de compra</a></p>
+        MAS1 Brand &copy; 2024
+      </footer>
+  </body>
+</html>
